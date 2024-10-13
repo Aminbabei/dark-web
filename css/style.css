@@ -1,0 +1,225 @@
+@font-face {
+    font-family: "Yekan-bakh";
+    src : url("../fonts/Yekan-Bakh-FaNum-04-Regular.woff") format("woff"),
+    url("../fonts/Yekan-Bakh-FaNum-05-Medium.woff") format("woff");
+}
+/*day night toggle*/
+.switch-wrapper {
+    margin: 30px auto;
+    font-size: 0;
+    text-align: center;
+}
+.switch-wrapper input {
+    display: none;
+}
+.switch-label {
+    font-size: 1rem;
+    display: inline-block;
+    line-height: 40px;
+    vertical-align: top;
+    padding: 5px 10px;
+    transition: transform ease-in 0.2s;
+    font-weight: bold;
+    opacity: 0.6;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 50px;
+    border: 2px solid #eee;
+    background-color: #2196F3;
+    background-image: radial-gradient(circle, #fefefe 20%, transparent 30%), radial-gradient(circle, #fefefe 20%, transparent 30%), radial-gradient(circle, #fefefe 20%, transparent 30%), radial-gradient(circle, #fefefe 20%, transparent 30%), radial-gradient(circle, #fefefe 20%, transparent 30%), radial-gradient(circle, #fefefe 20%, transparent 30%);
+    background-size: 50% 50%, 60% 60%, 40% 40%, 40% 40%, 50% 50%, 40% 40%;
+    background-position: 60% 82%, 80% 80%, 82% 80%, 110% 20%, 134% 12%, 130% 20%;
+    background-repeat: no-repeat;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    overflow: hidden;
+}
+.switch:before {
+    position: absolute;
+    content: "";
+    height: 35px;
+    width: 35px;
+    top: 50%;
+    left: 2px;
+    cursor: pointer;
+    transform: translateY(-50%);
+    background-color: #ffeb3b;
+    background-image: radial-gradient(circle, #ffc107 15%, #ffeb3b 100%);
+    box-shadow: 0px 0px 20px 10px rgba(255, 235, 255, 0.4);
+    transition: transform ease-in 0.2s;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+}
+.switch-label.day {
+    transform: scale(1.1);
+    opacity: 1;
+}
+input:checked ~ .switch {
+    background-color: #023660;
+    background-image: radial-gradient(circle, #fff 10%, transparent 30%), radial-gradient(circle, #fff 10%, transparent 30%), radial-gradient(circle, #fff 10%, transparent 30%), radial-gradient(circle, #fff 10%, transparent 30%), radial-gradient(circle, #fff 10%, transparent 30%), radial-gradient(circle, #fff 10%, transparent 30%), radial-gradient(circle, #fff 10%, transparent 30%), radial-gradient(circle, #fff 10%, transparent 30%), radial-gradient(circle, #fff 10%, transparent 30%);
+    background-size: 8% 8%, 7% 7%, 6% 6%, 8% 8%, 8% 8%, 6% 6%, 6% 6%, 8% 8%, 7% 7%;
+    background-position: 20% 20%, 45% 30%, 25% 55%, 20% 90%, 40% 60%, 5% 50%, 58% 10%, 58% 60%, 50% 80%;
+    background-repeat: no-repeat;
+}
+input:checked ~ .switch:before {
+    background-color: #ddd;
+    background-image: radial-gradient(circle, #c4c4c4 50%, transparent 50%), radial-gradient(circle, #c9c9c9 50%, transparent 50%), radial-gradient(circle, #c9c9c9 50%, transparent 50%), radial-gradient(circle, #c9c9c9 50%, transparent 50%);
+    background-size: 40% 40%, 25% 25%, 50% 50%, 30% 30%;
+    background-position: 20% 20%, 65% 30%, 120% 100%, 20% 80%;
+    box-shadow: 0px 0px 20px 10px rgba(255, 255, 255, 0.2);
+}
+.switch-wrapper input:checked ~ .switch-label.day {
+    transform: scale(1);
+    opacity: 0.6;
+}
+.switch-wrapper input:checked ~ .switch-label.night {
+    transform: scale(1.1);
+    opacity: 1;
+}
+.switch-wrapper input:checked ~ .switch:before {
+    transform: translate(60px, -50%);
+}
+
+*,body{
+    font-family: "Yekan-bakh";
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    background: #efefef;
+}
+a{
+    text-decoration: none;
+}
+/*login form*/
+.btn-success{
+    background-color: #28bb65;
+    color: #fff;
+    cursor: pointer;
+}
+section{
+    background: #efefef;
+    padding: 20px;
+    width: 400px;
+    box-shadow: 0 0 8px 0 #d7d5d5;
+    margin: 300px auto;
+    border-radius: 10px;
+}
+input,button{
+    width: 100%;
+    border: 1px solid #ccc;
+    height: 35px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    outline: 0;
+    padding: 0 10px;
+}
+i{
+    background: transparent;
+    margin-right: 10px;
+}
+.social-login-wrapper{
+    background: #e7e7e7;
+    padding: 8px;
+    border-radius: 5px;
+}
+.social-login{
+    text-align: center;
+    cursor: pointer;
+}
+.panel{
+    margin-top: 20px;
+    text-align: center;
+    display: none;
+}
+.panel i {
+    color: #999999;
+}
+.alert{
+    background: #f1be7e;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-right: 5px solid #F79F1F;
+
+}
+.loading{
+    display: none;
+}
+.box{
+    width: 200px;
+    height: 200px;
+    background: blue;
+    position: absolute;
+    top: 0;
+
+}
+.night{
+    background: #000;
+}
+.night-details{
+background:#343434;
+color:#fff
+}
+.container{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+}
+.post{
+    width: 25%;
+    box-shadow: 0 0 6px 0px #c9c7c7;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.post img{
+    width: 100%;
+    height: auto;
+    display: inline-block;
+}
+.post h3{
+    font-size: 22px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+.post p{
+    font-size: 18px;
+    line-height: 2;
+}
+.btn-load{
+    background: #9292f5;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+.btn-load:hover{
+    background: #5d5dd5;
+}
+@media screen and (max-width: 1024px){
+    .container{
+        flex-direction: column;
+        padding: 20px;
+    }
+    .post{
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
